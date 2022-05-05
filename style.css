@@ -1,6 +1,7 @@
 *{
   margin: 0 auto;
   padding: 0;
+  font-family: 'Open Sans', sans-serif;
 }
 
 #backuno{
@@ -24,23 +25,21 @@
   margin: auto;
   height: 90vh;
   width: 80%;
-  background-color: red;
   top: 5%;
   left: 10%;
 }
 
 #colonnasx{
-  background-color: yellowgreen;
   width: 30%;
   height: 100%;
   float: left;
 }
 
 #colonnadx{
-  background-color: yellow;
   width: 70%;
   height: 100%;
   float: left;
+  background-image: url(img/mine.jpg);
 }
 
 .header{
@@ -66,8 +65,61 @@
 
 #contatti{
   height: calc(100% - 8% - 10% - 10%);
+  background-color: white;
 }
 
 .scroll{
   overflow-y: auto;
+}
+
+#conversazione{
+  height: 80%;
+}
+
+#digitazione{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10%;
+  bottom: 0;
+  background-color: #F3EEEA;
+  color: #6B7376;
+  font-size: 20px;
+}
+
+#digitazione input{
+  width: 80%;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+}
+
+#digitazione input:focus-visible{
+  outline: 2px solid blue;
+}
+
+.boxmessaggio{
+  padding: 5px;
+  width: 250px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.flexend{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.flexstart{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.utente{
+  background-color: #D5F9BA;
+  
+}
+
+.risposta{
+  background-color: white;
 }
