@@ -19,29 +19,81 @@
   <div id="backdue" class="relative"></div> 
   <div id="app" >
 
+    <!--HEADER SINISTRA-->
     <div id="colonnasx">
-      <div class="header">
+      <div class="header p10">
+        <div class="sx">
+          <img src="img/avatar_io.jpg" alt="avatar">
+          <h4>Sofia</h4>
+        </div>
+        
+        <div class="dx">
+          <i class="fa-solid fa-microphone "></i>
+          <i class="fa-solid fa-microphone "></i>
+          <i class="fa-solid fa-microphone "></i>
+        </div>
+                   
 
       </div>
-      <div id="notifiche">
+      
+      <!--SILENZIA NOTIFICHE-->
+      <div id="notifiche" class="sx p10">
+        <div>
+          <i class="fa-solid fa-bell-slash"></i>
+        </div>
+        <div>
+          <h4>Ricevi notifiche dei messaggi</h3>
+          <p>Attiva notifiche Desktop</p>
+        </div>
 
       </div>
-      <div id="ricerca">
+
+      <!--BARRA DI RICERCA-->
+      <div id="ricerca" class="flexstart p10 sx">
         
+          <button><i class="fas fa-search "></i></button>
+          <input id="inputricerc" type="text" placeholder="Cerca o inizia una nuova chat">
+
       </div>
-      <div id="contatti" class="scroll">
+
+      <!--ELENCO DEI CONTATTI-->
+      <div id="contatti" class="scroll" class="flexstart">
         
+        <div class="contattosingolo p10 sx">
+          <div class="one">
+            <img src="img/avatar_1.jpg" alt="1">
+          </div>
+          <div class="two">
+            <h4>Michele</h4>
+            <p>Ultimo messaggio inviato</p>
+          </div>
+          <div class="">
+            
+          </div>
+
+        </div>
+
       </div>
       
     </div>
-
+    <!-----COLONNA DI DESTRA----->
     <div id="colonnadx">
 
-      <div class="header">
-
+      <div class="header p10">
+        <div class="sx">
+          <img src="img/avatar_io.jpg" alt="avatar">
+          <h4>Sofia</h4>
+        </div>
+        
+        <div class="dx">
+          <i class="fa-solid fa-microphone "></i>
+          <i class="fa-solid fa-microphone "></i>
+          <i class="fa-solid fa-microphone "></i>
+        </div>
       </div>
       <div class="scroll" id="conversazione">
 
+        <!--MESSAGGIO UTENTE-->
         <div class="flexend">
           <div class="utente boxmessaggio">
             <p>
@@ -50,6 +102,7 @@
           </div>
         </div>
 
+        <!--MESSAGGIO RISPOSTA-->
         <div class="flexstart">
           <div class="risposta boxmessaggio">
             <p>
@@ -59,7 +112,8 @@
        </div>
 
       </div>
-      <div id="digitazione">
+      <!--CAMPO DIGITAZIONE-->
+      <div id="digitazione" class="p10">
         <i class="far fa-smile"></i>
         <input placeholder="Scrivi un messaggio" type="text">
         <i class="fa-solid fa-microphone"></i>

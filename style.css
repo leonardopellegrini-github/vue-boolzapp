@@ -1,8 +1,11 @@
 *{
-  margin: 0 auto;
   padding: 0;
+  margin: 0;
+  display: border-box;
   font-family: 'Open Sans', sans-serif;
 }
+
+/*BACKGROUND*/
 
 #backuno{
   background-color: #009688;
@@ -19,6 +22,8 @@
 .relative{
   position: relative;
 }
+
+/*MAIN*/
 
 #app{
   position: absolute;
@@ -45,9 +50,17 @@
 .header{
   top: 0;
   background-color: #EAEAEA;
-  height: 10%;
-  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
+.p10{
+  padding: 10px;
+}
+
+/*COLONNA DI SINISTRA*/
 
 #colonnadx .header{
   border-left: 2px solid #B1B1B1;
@@ -55,7 +68,9 @@
 
 #notifiche{
   background-color: #8EDAFC;
-  height: 10%;
+  height: 55px;
+  display: flex;
+
 }
 
 #ricerca{
@@ -64,13 +79,25 @@
 }
 
 #contatti{
-  height: calc(100% - 8% - 10% - 10%);
+  height: calc(100% - 8% - 50px - 55px - 40px);
   background-color: white;
 }
 
 .scroll{
   overflow-y: auto;
 }
+
+#inputricerc{
+  height: 10px;
+}
+
+.contattosingolo{
+  height: 50px;
+  border-bottom: 1px solid grey;
+}
+
+
+/*COLONNA DI DESTRA*/
 
 #conversazione{
   height: 80%;
@@ -87,7 +114,7 @@
   font-size: 20px;
 }
 
-#digitazione input{
+#digitazione input, #inputricerc{
   width: 80%;
   border-radius: 5px;
   border: none;
@@ -122,4 +149,35 @@
 
 .risposta{
   background-color: white;
+}
+
+img{
+  width: 15%;
+  border-radius: 50px;
+}
+
+.sx{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.dx{
+ display: flex;
+ align-items: center;
+ justify-content: flex-end;
+}
+
+.flexcenter{
+  display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+#notifiche i{
+  background-color: white;
+  border-radius: 50px;
+  padding: 10px;
+  color: #8EDAFC;
+  font-size: 20px;
 }
