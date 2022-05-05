@@ -1,0 +1,73 @@
+*{
+  margin: 0 auto;
+  padding: 0;
+}
+
+#backuno{
+  background-color: #009688;
+  height:20vh;
+  margin-bottom: 0;
+}
+
+#backdue{
+  background-color: #DBDBD3;
+  height: 80vh;
+  margin-top: 0;
+}
+
+.relative{
+  position: relative;
+}
+
+#app{
+  position: absolute;
+  margin: auto;
+  height: 90vh;
+  width: 80%;
+  background-color: red;
+  top: 5%;
+  left: 10%;
+}
+
+#colonnasx{
+  background-color: yellowgreen;
+  width: 30%;
+  height: 100%;
+  float: left;
+}
+
+#colonnadx{
+  background-color: yellow;
+  width: 70%;
+  height: 100%;
+  float: left;
+}
+
+.header{
+  top: 0;
+  background-color: #EAEAEA;
+  height: 10%;
+  width: 100%;
+}
+
+#colonnadx .header{
+  border-left: 2px solid #B1B1B1;
+}
+
+#notifiche{
+  background-color: #8EDAFC;
+  height: 10%;
+}
+
+#ricerca{
+  background-color: #EAEAEA;
+  height: 8%;
+}
+
+#contatti{
+  height: calc(100% - 8% - 10% - 10%);
+}
+
+.scroll{
+  overflow-y: auto;
+}
