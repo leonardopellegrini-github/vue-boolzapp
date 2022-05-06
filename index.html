@@ -15,8 +15,7 @@
 
 <body>
     
-  <div id="backuno" class="relative"></div>   
-  <div id="backdue" class="relative"></div> 
+
   <div id="app" >
 
     <!--HEADER SINISTRA-->
@@ -57,14 +56,14 @@
       </div>
 
       <!--ELENCO DEI CONTATTI-->
-      <div id="contatti" class="scroll" class="flexstart">
+      <div id="contatti" class="scroll">
         
-        <div class="contattosingolo p10 sx">
+        <div v-for="user in users" class="contattosingolo p10">
           <div class="one">
-            <img src="img/avatar_1.jpg" alt="1">
+            <img :src="'img/avatar' +user.avatar+'.jpg'" alt="{user.avatar}">
           </div>
           <div class="two">
-            <h4>Michele</h4>
+            <h4>{{users.name}} <span class="data">12/10/2021</span></h4>
             <p>Ultimo messaggio inviato</p>
           </div>
           <div class="">
