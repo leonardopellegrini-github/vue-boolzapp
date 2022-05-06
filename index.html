@@ -89,26 +89,26 @@
       </div>
 
       <!--CONVERSAZIONE-->
-      <div class="scroll conversazione active" v-for="(user, index) in users" >
+      <div class="scroll conversazione active">
 
         <!--MESSAGGIO UTENTE-->
         <div class="flexend" >
-          <div class="utente boxmessaggio" >
+          <div v-for="messaggi in users[contatoreContatto].messages" class="boxmessaggio" :class="messaggi.status">
             <p>
-              {{users[contatoreContatto].messages}}
+              {{messaggi.message}}
             </p>
           </div>
         </div>
 
-        <!--MESSAGGIO RISPOSTA-->
+        <!--MESSAGGIO RISPOSTA
         <div class="flexstart">
-          <div class="risposta boxmessaggio" >
+          <div class="received boxmessaggio" >
             <p>
-              {{users[contatoreContatto].messages[date]}
+            
             </p>
           </div>
        </div>
-
+       -->
       </div>
 
       <!--CAMPO DIGITAZIONE-->

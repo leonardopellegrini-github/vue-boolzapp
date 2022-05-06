@@ -161,12 +161,12 @@ body{
   justify-content: flex-start;
 }
 
-.utente{
+.sent{
   background-color: #D5F9BA;
   
 }
 
-.risposta{
+.received{
   background-color: white;
 }
 
