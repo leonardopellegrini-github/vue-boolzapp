@@ -58,16 +58,13 @@
       <!--ELENCO DEI CONTATTI-->
       <div id="contatti" class="scroll">
         
-        <div v-for="user in users" class="contattosingolo p10">
+        <div v-for="user, contatoreContatto) in users" class="contattosingolo p10">
           <div class="one">
-            <img :src="'img/avatar' +user.avatar+'.jpg'" alt="{user.avatar}">
+            <img :src="'img/avatar' +user.avatar+'.jpg'" :alt="user.avatar">
           </div>
           <div class="two">
-            <h4>{{users.name}} <span class="data">12/10/2021</span></h4>
+            <h4>{{user.name}} <span class="data">12/10/2021</span></h4>
             <p>Ultimo messaggio inviato</p>
-          </div>
-          <div class="">
-            
           </div>
 
         </div>
@@ -90,10 +87,12 @@
           <i class="fa-solid fa-microphone "></i>
         </div>
       </div>
-      <div class="scroll" id="conversazione">
+
+      <!--CONVERSAZIONE-->
+      <div class="scroll conversazione" v-for="(user, contatoreContatto) in users" :class="{ 'active' : user === contatoreContatto}">
 
         <!--MESSAGGIO UTENTE-->
-        <div class="flexend">
+        <div class="flexend" >
           <div class="utente boxmessaggio">
             <p>
               Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
@@ -111,6 +110,7 @@
        </div>
 
       </div>
+
       <!--CAMPO DIGITAZIONE-->
       <div id="digitazione" class="p10">
         <i class="far fa-smile"></i>

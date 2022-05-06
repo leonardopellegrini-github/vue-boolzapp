@@ -113,8 +113,13 @@ body{
 
 /*COLONNA DI DESTRA*/
 
-#conversazione{
+.conversazione{
   height: 80%;
+  display: none;
+}
+
+.active{
+  display: block;
 }
 
 #digitazione{

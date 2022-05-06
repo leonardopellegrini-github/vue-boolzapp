@@ -3,7 +3,8 @@ const app = new Vue({
     el: '#app',
 
     data:{
-        users:{
+        users:[
+        {
             name: 'Michele',
             avatar: '_1',
             visible: true,
@@ -163,6 +164,13 @@ const app = new Vue({
                     status: 'received'
                 }
             ],
+            contatoreContatto: 0,
+            
         }
+        
+      ]
+
+      
     }
+
 })
