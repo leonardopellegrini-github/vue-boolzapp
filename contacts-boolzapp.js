@@ -164,13 +164,22 @@ const app = new Vue({
                     status: 'received'
                 }
             ],
-            contatoreContatto: 0,
             
         }
         
-      ]
-
+      ],
+      contatoreContatto: 0,
+      mostra: false,
+      search: ''
       
+    },
+
+    methods:{
+        filter(){
+            return this.users.filter((user)=>{
+                return user.name.match(this.search)
+            });
+        }
     }
 
 })

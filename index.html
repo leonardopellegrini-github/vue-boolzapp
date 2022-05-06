@@ -28,8 +28,8 @@
         
         <div class="dx">
           <i class="fa-solid fa-microphone "></i>
-          <i class="fa-solid fa-microphone "></i>
-          <i class="fa-solid fa-microphone "></i>
+          <i class="fa-solid fa-message"></i>
+          <i class="fa-solid fa-ellipsis-vertical"></i>
         </div>
                    
 
@@ -51,14 +51,14 @@
       <div id="ricerca" class="flexstart p10 sx">
         
           <button><i class="fas fa-search "></i></button>
-          <input id="inputricerc" type="text" placeholder="Cerca o inizia una nuova chat">
+          <input id="inputricerc" type="text" placeholder="Cerca o inizia una nuova chat" v-model="search">
 
       </div>
 
       <!--ELENCO DEI CONTATTI-->
       <div id="contatti" class="scroll">
         
-        <div v-for="user, contatoreContatto) in users" class="contattosingolo p10">
+        <div v-for="user, index) in users" class="contattosingolo p10" @click="contatoreContatto = index">
           <div class="one">
             <img :src="'img/avatar' +user.avatar+'.jpg'" :alt="user.avatar">
           </div>
@@ -77,34 +77,34 @@
 
       <div class="header p10">
         <div class="sx">
-          <img src="img/avatar_io.jpg" alt="avatar">
-          <h4>Sofia</h4>
+          <img :src="'img/avatar'+users[contatoreContatto].avatar+'.jpg'" :alt="users[contatoreContatto].avatar ">
+          <h4>{{users[contatoreContatto].name}}</h4>
         </div>
         
         <div class="dx">
-          <i class="fa-solid fa-microphone "></i>
-          <i class="fa-solid fa-microphone "></i>
-          <i class="fa-solid fa-microphone "></i>
+          <i class="fas fa-search"></i>
+          <i class="fas fa-paperclip"></i>
+          <i class="fa-solid fa-ellipsis-vertical"></i>
         </div>
       </div>
 
       <!--CONVERSAZIONE-->
-      <div class="scroll conversazione" v-for="(user, contatoreContatto) in users" :class="{ 'active' : user === contatoreContatto}">
+      <div class="scroll conversazione active" v-for="(user, index) in users" >
 
         <!--MESSAGGIO UTENTE-->
         <div class="flexend" >
-          <div class="utente boxmessaggio">
+          <div class="utente boxmessaggio" >
             <p>
-              Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              {{users[contatoreContatto].messages}}
             </p>
           </div>
         </div>
 
         <!--MESSAGGIO RISPOSTA-->
         <div class="flexstart">
-          <div class="risposta boxmessaggio">
+          <div class="risposta boxmessaggio" >
             <p>
-              Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              {{users[contatoreContatto].messages[date]}
             </p>
           </div>
        </div>
