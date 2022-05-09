@@ -172,6 +172,7 @@ const app = new Vue({
       contatoreContatto: 0,
       search: '',
       nuovoMex: '',
+      
     },
 
     methods:{
@@ -182,7 +183,7 @@ const app = new Vue({
         },
 
         inserisciMessaggio(contatoreContatto){
-
+            
             const index = this.contatoreContatto;
             
             const nuoviDati = {
@@ -207,9 +208,15 @@ const app = new Vue({
             };
 
             setTimeout(() => this.users[this.contatoreContatto].messages.push(risposta), 2000);
-        }
+        },
 
-       
+        ricerca(){
+    
+            // return this.users.name.filter(users => {
+            //  return users.name.toLowerCase().includes(this.search.toLowerCase())
+            //})
+            
+          }
 
     }
 

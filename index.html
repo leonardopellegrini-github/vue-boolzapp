@@ -52,14 +52,14 @@
       <div id="ricerca" class="flexstart p10 sx">
         
           <button><i class="fas fa-search "></i></button>
-          <input id="inputricerc" type="text" placeholder="Cerca o inizia una nuova chat" v-model="search">
+          <input id="inputricerc" type="text" placeholder="Cerca o inizia una nuova chat" v-model="search" @keydown="ricerca()">
 
       </div>
 
       <!--ELENCO DEI CONTATTI-->
       <div id="contatti" class="scroll">
         
-        <div v-for="user, index) in users" class="contattosingolo p10" @click="contatoreContatto = index">
+        <div v-for="(user, index) in users " class="contattosingolo p10"  @click="contatoreContatto = index">
           <div class="one">
             <img :src="'img/avatar' +user.avatar+'.jpg'" :alt="user.avatar">
           </div>
