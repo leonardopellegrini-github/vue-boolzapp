@@ -172,7 +172,7 @@ const app = new Vue({
       contatoreContatto: 0,
       search: '',
       nuovoMex: '',
-      
+      falso: false,
     },
 
     methods:{
@@ -211,11 +211,22 @@ const app = new Vue({
         },
 
         ricerca(){
-    
-            // return this.users.name.filter(users => {
-            //  return users.name.toLowerCase().includes(this.search.toLowerCase())
-            //})
             
+            this.users.forEach(user => {
+               console.log(this.search);
+               console.log(user.name.includes(this.search)); 
+               console.log(user.name); 
+               console.log('//////////////');
+
+               if (user.name.toLowerCase().includes(this.search.toLowerCase())){
+               return user.visible 
+            } else{
+               return user.visible = this.falso
+            }
+
+            });
+        
+        
           }
 
     }
