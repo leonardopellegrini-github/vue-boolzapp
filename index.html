@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <title>BOOLZAPP</title>
+  
 </head>
 
 <body>
@@ -92,11 +93,14 @@
       <div class="scroll conversazione active">
 
         <!--MESSAGGIO UTENTE-->
-        <div class="flexend" >
-          <div v-for="messaggi in users[contatoreContatto].messages" class="boxmessaggio" :class="messaggi.status">
-            <p>
-              {{messaggi.message}}
-            </p>
+        <div class="messaggi" >
+          <div v-for="messaggi in users[contatoreContatto].messages" :class="messaggi.status">
+            <div :class="messaggi.status">
+              <p>
+                {{messaggi.message}}
+              </p>
+            </div>
+              
           </div>
         </div>
 
@@ -114,7 +118,7 @@
       <!--CAMPO DIGITAZIONE-->
       <div id="digitazione" class="p10">
         <i class="far fa-smile"></i>
-        <input placeholder="Scrivi un messaggio" type="text">
+        <input placeholder="Scrivi un messaggio" type="text" v-model="nuovoMex" @keyup.enter="inviaMessaggio(message)">
         <i class="fa-solid fa-microphone"></i>
         
       </div>

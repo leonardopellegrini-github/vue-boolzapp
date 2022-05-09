@@ -169,17 +169,17 @@ const app = new Vue({
         
       ],
       contatoreContatto: 0,
-      mostra: false,
-      search: ''
-      
+      search: '',
+      nuovoMex: '',
     },
 
     methods:{
-        filter(){
-            return this.users.filter((user)=>{
-                return user.name.match(this.search)
-            });
-        }
+        
+        ultimoMessaggio(index){
+            return user.message[users.messages.length - 1].message;
+        },
+
+
     }
 
 })
