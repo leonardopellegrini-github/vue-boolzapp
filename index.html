@@ -118,7 +118,7 @@
       <!--CAMPO DIGITAZIONE-->
       <div id="digitazione" class="p10">
         <i class="far fa-smile"></i>
-        <input placeholder="Scrivi un messaggio" type="text" v-model="nuovoMex" @keyup.enter="inserisciMessaggio(contatoreContatto)">
+        <input placeholder="Scrivi un messaggio" type="text" v-model="nuovoMex" @keyup.enter="inserisciMessaggio(contatoreContatto), rispostaAutomatica(contatoreContatto)">
         <i class="fa-solid fa-microphone"></i>
         
       </div>

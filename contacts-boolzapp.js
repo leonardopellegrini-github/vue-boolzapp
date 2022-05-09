@@ -184,8 +184,7 @@ const app = new Vue({
         inserisciMessaggio(contatoreContatto){
 
             const index = this.contatoreContatto;
-            console.log(index);
-            console.log(this.nuovoMex);
+            
             const nuoviDati = {
                 date: '10/01/2020 15:51:00',
                 message: this.nuovoMex,
@@ -193,11 +192,24 @@ const app = new Vue({
             };
             //pushare nell'array dei messaggi
             this.users[index].messages.push(nuoviDati);
+
             this.nuovoMex = "";
-            console.log(nuoviDati);
             
+        },
+
+        rispostaAutomatica(contatoreContatto){
+
+            const risposta = {
+                date: '10/01/2020 15:51:00',
+                message: 'ciao emi lo zio',
+                status: 'received',
+            
+            };
+
+            setTimeout(() => this.users[this.contatoreContatto].messages.push(risposta), 2000);
         }
 
+       
 
     }
 
