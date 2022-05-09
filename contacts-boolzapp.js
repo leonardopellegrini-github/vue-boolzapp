@@ -163,6 +163,7 @@ const app = new Vue({
                     message: 'OK!!',
                     status: 'received'
                 }
+                
             ],
             
         }
@@ -176,10 +177,28 @@ const app = new Vue({
     methods:{
         
         ultimoMessaggio(index){
-            return user.message[users.messages.length - 1].message;
+            return this.users.message[this.users.messages.length - 1].message;
+            
         },
+
+        inserisciMessaggio(contatoreContatto){
+
+            const index = this.contatoreContatto;
+            console.log(index);
+            console.log(this.nuovoMex);
+            const nuoviDati = {
+                date: '10/01/2020 15:51:00',
+                message: this.nuovoMex,
+                status: 'sent',
+            };
+            //pushare nell'array dei messaggi
+            this.users[index].messages.push(nuoviDati);
+            this.nuovoMex = "";
+            console.log(nuoviDati);
+            
+        }
 
 
     }
 
-})
+});

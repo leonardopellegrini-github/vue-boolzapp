@@ -67,6 +67,12 @@ body{
   padding: 10px;
 }
 
+.dx i{
+  font-size: 18px;
+  margin-left: 10px;
+  color: grey;
+}
+
 /*COLONNA DI SINISTRA*/
 
 #colonnadx .header{
@@ -159,23 +165,23 @@ body{
 
 
 .sent{
-  background-color: #D5F9BA;
-  display: flex;
-  justify-content: flex-end;
-  left: 0;
+  background-color: rgb(213, 249, 186);
+  float: right;
   padding: 5px;
   margin: 5px;
   border-radius: 25px;
+  clear: both;
+  display: table;
 }
 
 .received{
   background-color: white;
-  display: flex;
-  justify-content: flex-start;
   right: 0;
   padding: 5px;
   margin: 5px;
   border-radius: 25px;
+  clear: both;
+  display: table;
 }
 
 .flexend{
